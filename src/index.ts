@@ -2,8 +2,8 @@ import Server from './provider/Server';
 import {PORT,NODE_ENV} from './config';
 import express from 'express';
 import cors from 'cors';
-import AgenteController from './controllers/AgenteController';
-import AuthenticationController from './controllers/AuthenticationController';
+import CharacterController from './controllers/CharacterController';
+import ReservacionController from './controllers/ReservacionController';
 
 const server = new Server({
     port:PORT,
@@ -14,8 +14,8 @@ const server = new Server({
         cors()
     ],
     controllers:[
-        AgenteController.instance,
-        AuthenticationController.instance
+        CharacterController.instance,
+        ReservacionController.instance,
     ]
 });
 
